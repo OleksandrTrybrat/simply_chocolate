@@ -6,13 +6,13 @@
   // .explore__body
   &__body {
     padding: 72px 0;
-    background: url('/src/image/explore/bg_image.png') 100% center / cover
+    background: url('../image/explore/bg_image.png') 100% center / cover
       no-repeat;
   }
 
   @include mobile {
     &__body {
-      background: url('/src/image/explore/bg_image-768.png') 100% center / cover
+      background: url('../image/explore/bg_image-768.png') 100% center / cover
         no-repeat;
     }
   }
@@ -25,7 +25,7 @@
   @media (max-width: 540px) {
     &__body {
       padding: 62px 20px;
-      background: url('/src/image/explore/bg_image-480.png') 100% center / cover
+      background: url('../image/explore/bg_image-480.png') 100% center / cover
         no-repeat;
     }
     &__block {
