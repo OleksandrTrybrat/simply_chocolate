@@ -1,0 +1,135 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+section.hero {
+  margin-bottom: 72px;
+}
+.hero {
+  &__body {
+    min-height: 600px;
+
+    background:
+      linear-gradient(180deg, rgb(17 17 17 / 0%), rgb(17 17 17 / 40%) 100%),
+      url('/src/image/hero/hero_bg.png') 100% top / cover no-repeat;
+    border-radius: $borderRadiusSmall;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 40px 40px;
+  }
+
+  // .hero__title
+  &__title {
+    width: 445px;
+    padding-bottom: 32px;
+
+    h1 {
+      color: $colorWhite;
+      font-size: rem(28);
+      font-weight: 500;
+      line-height: 34px;
+    }
+  }
+
+  // .hero__buttons
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .hero__button-link
+  &__button-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  // .hero__button-scroll
+  &__button-scroll {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .scroll__span {
+      color: $colorWhite;
+      font-size: inherit;
+      font-weight: 500;
+      line-height: 18px;
+      transition: $transitionDuration;
+
+      &:hover {
+        color: $colorAccent;
+      }
+    }
+
+    .scroll__arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background-color: $colorWhite;
+      border-radius: 50%;
+      transition: $transitionDuration;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      svg path {
+        fill: $colorAccent;
+      }
+
+      svg rect {
+        fill: transparent;
+      }
+    }
+  }
+
+  @include mobile {
+    &__body {
+      background-position: 80% top;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (width <= 620px) {
+    &__body {
+      background-position: 70% top;
+      padding: 0 20px 20px;
+    }
+
+    &__buttons {
+      display: inline-block;
+    }
+
+    &__button-link {
+      justify-content: flex-start;
+      padding-bottom: 32px;
+    }
+  }
+
+  @include mobile-s {
+    &__body {
+      background:
+        linear-gradient(180deg, rgb(17 17 17 / 0%), rgb(17 17 17 / 40%) 100%),
+        url('/src/image/hero/hero_bg_mobile.png') 80% top / cover no-repeat;
+    }
+
+    &__title {
+      max-width: 295px;
+
+      h1 {
+        font-size: rem(20);
+        line-height: 24px;
+      }
+    }
+  }
+
+  @media (width <= 320px) {
+    &__title {
+      max-width: 280px;
+    }
+  }
+}

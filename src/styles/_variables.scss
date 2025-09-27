@@ -1,0 +1,22 @@
+@use 'helpers' as *;
+
+// Базовий розмір шрифту
+$baseFontSize: rem(14);
+$textFontSize: rem(18);
+$titleFontSize: rem(24);
+
+$colorWhite: #fff;
+$colorBlack: #111;
+$colorViolet: #1e1823;
+$colorWhiteOpacity: #fafafa;
+$colorAccent: #fd9222;
+$colorAccentHover: #fcf1e0;
+//$color-black: rgba(17, 17, 17, 1);
+//$color-violet: rgba(30, 24, 35, 1);
+//$color-white: rgba(250, 250, 250, 1);
+//$color-accent: rgba(253, 146, 34, 1);
+
+$borderRadiusLarge: 100px;
+$borderRadiusSmall: 15px;
+
+$transitionDuration: 0.2s;

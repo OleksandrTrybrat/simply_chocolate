@@ -1,0 +1,95 @@
+@use '../helpers' as *;
+@use '../variables' as *;
+
+.description {
+  // .description__cards
+  &__cards {
+    display: flex;
+    margin: 0 -35px;
+    padding: 40px;
+  }
+
+  &__content-card {
+    flex: 0 1 33.333%;
+    padding: 0 35px;
+    display: flex;
+  }
+
+  // .description__card
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // .description__card-image
+  &__card-image {
+    display: inline-flex;
+    border: 1px solid $colorWhite;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 22px;
+
+    svg path {
+      color: $colorAccent;
+    }
+  }
+
+  @include tablet-s {
+    &__cards {
+      row-gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    &__content-card {
+      flex: 0 1 50%;
+    }
+  }
+
+  @media (width <= 620px) {
+    &__content-card {
+      flex: 0 1 100%;
+    }
+  }
+
+  // .description__card-title
+  &__card-title {
+    color: $colorWhite;
+    font-size: $textFontSize;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  // .description__card-text
+  &__card-text {
+    color: rgb(255 255 255 / 70%);
+    font-weight: 400;
+    flex: 1 1 auto;
+  }
+}
+
+.description-hero {
+  // .description-hero__container
+  &__container {
+    background-color: $colorViolet;
+  }
+}
+
+.card__description-border {
+  position: absolute;
+  top: 72px;
+  right: -25px;
+  border-right: 1px solid $colorWhite;
+  height: 130px;
+}
+
+@include tablet-s {
+  .description__hero {
+    margin-bottom: 72px;
+  }
+
+  .card__description-border {
+    display: none;
+  }
+}
